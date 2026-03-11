@@ -1,0 +1,63 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // TODO: プロジェクト名に変更してください
+  "name": "my-app",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-02-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "env": {
+    "alpha": {
+      // TODO: プロジェクト名に変更してください
+      "name": "my-app-alpha",
+      "vars": {
+        // TODO: お問い合わせメール送信先を設定してください
+        "CONTACT_EMAIL_TO": "delivered@resend.dev",
+        // TODO: サイト URL を設定してください
+        "SITE_URL": "https://alpha.example.com",
+        // TODO: microCMS サービスドメインを設定してください
+        "MICROCMS_SERVICE_DOMAIN": "your-service-domain"
+      },
+      "routes": [
+        // TODO: カスタムドメインを設定してください
+        // { "pattern": "alpha.example.com", "custom_domain": true }
+      ],
+      "images": {
+        "binding": "IMAGES"
+      }
+    },
+    "prod": {
+      // TODO: プロジェクト名に変更してください
+      "name": "my-app",
+      "vars": {
+        // TODO: お問い合わせメール送信先を設定してください
+        "CONTACT_EMAIL_TO": "info@example.com",
+        // TODO: サイト URL を設定してください
+        "SITE_URL": "https://example.com",
+        // TODO: microCMS サービスドメインを設定してください
+        "MICROCMS_SERVICE_DOMAIN": "your-service-domain"
+      },
+      "images": {
+        "binding": "IMAGES"
+      }
+    }
+  }
+}
