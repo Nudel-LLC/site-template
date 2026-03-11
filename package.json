@@ -35,7 +35,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.575.0",
     "microcms-js-sdk": "^3.3.0",
-    "motion": "^12.34.3",
+    "motion": "^12.35.2",
     "next": "16.1.6",
     "pino": "^10.3.1",
     "radix-ui": "^1.4.3",
